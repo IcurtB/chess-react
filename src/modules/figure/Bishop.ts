@@ -1,5 +1,13 @@
-import { Figure } from "./Figure";
+import { Cell } from "../Cell";
+import { Colors } from "../Colors";
+import { Figure, FigureNames } from "./Figure";
+import { blackBishop, whiteBishop } from "src/assets";
 
-export class Bisop extends Figure {
-  
+//Слон
+export class Bishop extends Figure {
+  constructor(color: Colors, cell: Cell) {
+    super(color, cell);
+    this.logo = color === Colors.BLACK ? blackBishop : whiteBishop;
+    this.name = FigureNames.BISHOP;
+  }
 }
